@@ -1,7 +1,53 @@
-# GitHub Codespaces ♥️ Jupyter Notebooks
+## Employee BURN RATE Prediction
 
-Welcome to your shiny new codespace! We've got everything fired up and running for you to explore Python and Jupyter notebooks.
+The dataset contains Employee information 
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with what you're seeing right now - where you go from here is up to you!
+Dataset Source: Hackerearth
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+Independent Variables :
+- 'Employee ID', 
+- 'Date of Joining', 
+- 'Gender', 
+- 'Company Type',
+- 'WFH Setup Available', 
+- 'Designation', 
+- 'Resource Allocation',
+- 'Mental Fatigue Score', 
+    
+
+Dependent Variable :
+- 'Burn Rate'
+
+Event is continous varible - Rate i.e. 0 to 1 Value
+
+Created Features :
+- 'Vintage' : [Last Date - Date of Joining]
+
+
+### Problem Type :
+    Status Prediction Model
+
+### ML algorithm used :
+    Linear Regrssion Model
+
+
+#### Categorical Varible
+
+cat_var = ['Gender', 'Company Type', 'WFH Setup Available', 'Designation', 
+           'Resource Allocation']
+
+#### Continous Varible
+
+df_cont_var = df1[['Designation','Resource Allocation','Mental Fatigue Score','Burn Rate']]
+
+
+### FINAL EQUATION
+
+Equation:   
+-                y = 
+-                [-0.08623414] + 
+-                [0.0047] * Gender_dum + 
+-                [-0.0111] * WFH_Setup_Available_dum + 
+-                [-0.0045] * Designation + 
+-                [0.0284] * Resource Allocation + 
+-                [0.07409] * Mental Fatigue Score
